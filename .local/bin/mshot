@@ -1,0 +1,34 @@
+#!/bin/bash
+
+screenshot () {
+	maim -ou -f "png" -b 2 -c 0.82,0.18,0.18 $1 | xclip -selection clipboard -t image/png
+	exit 0
+}
+
+usage () {
+	echo "Usage: $(basename $0) [-f|-w|-r|-h]"
+	echo "	-f	capture entire screen"
+	echo "	-w	capture active window"
+	echo "	-r	capture user selection"
+	echo "	-h	display this message"
+	exit 0
+}
+
+while getopts ":fwr" opt; do
+	case ${opt} in
+		f) # fullscreen option
+		  screenshot ""
+		  ;;
+		w) # window option
+		  screenshot "-i $(xdotool getactivewindow)"
+		  ;;
+		r) # region option
+		  screenshot "-s"
+		  ;;
+		h | *) # help
+		  usage
+		  ;;
+	esac
+done
+usage
+exit 0

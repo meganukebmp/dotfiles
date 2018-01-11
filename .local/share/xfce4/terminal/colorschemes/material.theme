@@ -1,0 +1,5 @@
+[Scheme]
+Name=Material
+ColorBackground=#2c2c2a2a3737
+ColorPalette=rgb(44,42,55);rgb(186,0,13);rgb(8,127,35);rgb(198,105,0);rgb(0,75,160);rgb(156,39,176);rgb(38,198,218);rgb(167,192,205);rgb(95,95,95);rgb(244,67,54);rgb(76,175,80);rgb(255,193,7);rgb(0,119,194);rgb(208,92,227);rgb(98,239,255);rgb(255,255,255)
+ColorForeground=#ffffffffffff
