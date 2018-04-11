@@ -1,0 +1,8 @@
+# Default font settings
+Default font = Sans 10
+Lightdm = Sans Regular 10
+
+# fix for lid not locking screen
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/logind-handle-lid-switch -s false
+
+# USE 915resolution hack for grub
